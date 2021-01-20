@@ -21,7 +21,7 @@ std::string infix2postfix(std::string infix) {
             } else if (infix[counter] == '+' || infix[counter] == '-') {
                 while (sign_stack.get() == '+'
                     || sign_stack.get() == '-'
-                    || sign_stack.get() == '*' 
+                    || sign_stack.get() == '*'
                     || sign_stack.get() == '/') {
                     postfix += sign_stack.pop();
                     postfix += ' ';
