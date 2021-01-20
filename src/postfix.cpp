@@ -19,7 +19,10 @@ std::string infix2postfix(std::string infix) {
                 }
                 sign_stack.pop();
             } else if (infix[counter] == '+' || infix[counter] == '-') {
-                while (sign_stack.get() == '+' || sign_stack.get() == '-' || sign_stack.get() == '*' || sign_stack.get() == '/') {
+                while (sign_stack.get() == '+' 
+                    || sign_stack.get() == '-' 
+                    || sign_stack.get() == '*' 
+                    || sign_stack.get() == '/') {
                     postfix += sign_stack.pop();
                     postfix += ' ';
                 }
@@ -46,4 +49,5 @@ std::string infix2postfix(std::string infix) {
     }
     return postfix;
 }
+
 

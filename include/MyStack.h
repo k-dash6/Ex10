@@ -8,6 +8,7 @@ class MyStack {
      T* stack;
      int size, p;
  public:
+
      explicit MyStack(int n_size) {
          size = n_size;
          stack = new T[size];
@@ -15,7 +16,7 @@ class MyStack {
      MyStack(const MyStack& c) {
          stack = new T[size];
          for (int i = 0; i < p; ++i) {
-             stack[i] = c.stack[i]
+             stack[i] = c.stack[i];
          }
          size = c.size;
          p = c.p;
@@ -33,8 +34,7 @@ class MyStack {
      T pop() {
          if (p <= 0) {
              return 0;
-         }
-         else {
+         } else {
              p--;
              return stack[p];
          }
