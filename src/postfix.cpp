@@ -7,7 +7,7 @@ std::string infix2postfix(std::string infix) {
     std::string postfix;
     int counter = 0;
     int len = infix.length();
-    MyStack<char> sign_stack(len);
+    MyStack<char> sign_stack(len + 10);
     while (counter < len) {
         if (infix[counter] != ' ') {
             if (infix[counter] == '(') {
