@@ -7,8 +7,8 @@ class MyStack {
  private:
      T* stack;
      int size, p;
- public:
 
+ public:
      explicit MyStack(int n_size) {
          size = n_size;
          stack = new T[size];
