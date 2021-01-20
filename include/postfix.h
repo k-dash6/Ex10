@@ -1,6 +1,7 @@
-// Copyright 2020 A.SHT
+// Copyright 2021 dash
 #ifndef INCLUDE_POSTFIX_H_
 #define INCLUDE_POSTFIX_H_
+
 #include <string>
 
 std::string infix2postfix(std::string infix);

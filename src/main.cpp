@@ -1,9 +1,12 @@
-// Copyright 2020 A.SHT
+// Copyright 2021 dash
 #include <iostream>
 #include <string>
 
 #include "postfix.h"
 
 int main() {
+    std::string infix = "2 + 6 * 3 / (4 - 2)";    //postfix = "2 6 3 * 4 2 - / +"
+    std::string postfix = infix2postfix(infix);
+    std::cout << postfix << std::endl;
   return 0;
 }
