@@ -12,6 +12,7 @@ class MyStack {
      explicit MyStack(int n_size) {
          size = n_size;
          stack = new T[size];
+         p = 0;
      }
      MyStack(const MyStack& c) {
          size = c.size;
