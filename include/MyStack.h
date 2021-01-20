@@ -14,12 +14,12 @@ class MyStack {
          stack = new T[size];
      }
      MyStack(const MyStack& c) {
+         size = c.size;
+         p = c.p;
          stack = new T[size];
          for (int i = 0; i < p; ++i) {
              stack[i] = c.stack[i];
          }
-         size = c.size;
-         p = c.p;
      }
      ~MyStack() {
          delete[] stack;
