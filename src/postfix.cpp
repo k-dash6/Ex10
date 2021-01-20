@@ -45,6 +45,9 @@ std::string infix2postfix(std::string infix) {
             }
         }
     }
+    if (postfix.back() == ' ') {
+        postfix.pop_back();
+    }
     while (!sign_stack.isEmpty()) {
         postfix += ' ';
         postfix += sign_stack.pop();
