@@ -8,7 +8,7 @@ std::string infix2postfix(std::string infix) {
     int counter = 0;
     int len = infix.length();
     MyStack<char> sign_stack(len + 100);
-    while (counter < len) {
+    for (counter = 0; counter < len; counter++) {
         if (infix[counter] != ' ') {
             if (infix[counter] == '(') {
                 sign_stack.push(infix[counter]);
@@ -44,10 +44,6 @@ std::string infix2postfix(std::string infix) {
                 postfix += ' ';
             }
         }
-        counter = counter + 1;
-    }
-    if (postfix.back() == ' ') {
-        postfix.pop_back();
     }
     while (!sign_stack.isEmpty()) {
         postfix += ' ';
